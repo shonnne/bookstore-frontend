@@ -1,3 +1,4 @@
+import ChatBot from "./components/ChatBot";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
@@ -50,6 +51,7 @@ function App() {
                     <Route path="*" element={<Navigate to={user ? "/books" : "/login"} />} />
                 </Routes>
             </div>
+            <ChatBot />
         </div>
     );
 }
